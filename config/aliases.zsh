@@ -1,0 +1,17 @@
+alias zshconfig="vim ~/.zshrc && reload"
+alias tmuxconfig="vim ~/.tmux.conf"
+alias reload="source ~/.zshrc"
+alias reload-tmux="tmux source-file ~/.tmux.conf"
+alias c="clear"
+alias cl="clear && ls"
+alias cla="clear && la"
+alias vim="nvim"
+alias py="python3"
+alias cr="cargo r"
+alias chrome="open -a \"Google Chrome.app\""
+alias code="open -a \"Visual Studio Code.app\""
+alias message="open -a \"Messages\""
+alias arc="open -a \"Arc.app\""
+alias config="vim ~/.config/"
+alias cd=z
+alias ff=fastfetch
