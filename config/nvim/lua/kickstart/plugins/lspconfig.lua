@@ -70,6 +70,7 @@ return {
 				"pyright", -- Used to format python code
 				"clangd", -- Used to format c pepe
 				"gopls", -- Used for golang
+				"helm-ls", -- Used for golang
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

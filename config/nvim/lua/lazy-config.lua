@@ -12,6 +12,7 @@ return {
 		require("kickstart.plugins.todo"),
 		require("kickstart.plugins.mini"),
 		require("kickstart.plugins.tree-sitter"),
+		require("kickstart.plugins.vim-helm"),
 	}, {
 		ui = {
 			-- If you have a Nerd Font, set icons to an empty table which will use the
