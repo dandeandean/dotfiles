@@ -1,3 +1,4 @@
+# home-manager switch
 { config, pkgs, ...} : {
   home.username = "ddd";
   home.homeDirectory = "/home/ddd";
