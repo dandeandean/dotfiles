@@ -23,4 +23,15 @@ return {
 			--    - treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
 	},
+	-- from https://github.com/ngalaiko/tree-sitter-go-template
+	vim.filetype.add({
+		extension = {
+			gotmpl = "gotmpl",
+		},
+		pattern = {
+			[".*/templates/.*%.tpl"] = "helm",
+			[".*/templates/.*%.ya?ml"] = "helm",
+			["helmfile.*%.ya?ml"] = "helm",
+		},
+	}),
 }
