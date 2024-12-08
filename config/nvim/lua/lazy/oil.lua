@@ -1,5 +1,4 @@
 return {
-	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	{
 		"stevearc/oil.nvim",
 		config = function()

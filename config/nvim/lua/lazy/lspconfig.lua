@@ -6,53 +6,13 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			{ "j-hui/fidget.nvim", opts = {} },
-
 			{ "folke/neodev.nvim", opts = {} },
 		},
 		config = function()
 			require("custom.plugins.lsp-attach")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
-			local servers = {
-				clangd = {},
-				gopls = {},
-				pyright = {},
-				rust_analyzer = {},
-				yamlls = {
-					settings = {
-						yaml = {
-							schemaStore = {
-								enable = false,
-								url = "",
-							},
-							-- Set up Pipeline tooling
-							schemas = {
-								--["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
-								--["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "ci/*.yml",
-								["https://raw.githubusercontent.com/docker/compose/master/compose/config/compose_spec.json"] = "docker-compose*.{yml,yaml}",
-								--["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "BuildTools/*.{yml,yaml}",
-								-- These schemas aren't working, so we need to debug locally
-								["/Users/dandean/git/CNPPipe/schema/schema.json"] = "YamlDefinitions/*.{yaml,yml}",
-							},
-						},
-					},
-				},
-
-				lua_ls = {
-					-- cmd = {...},
-					-- filetypes { ...},
-					-- capabilities = {},
-					settings = {
-						Lua = {
-							completion = {
-								callSnippet = "Replace",
-							},
-							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-							-- diagnostics = { disable = { 'missing-fields' } },
-						},
-					},
-				},
-			}
+			local servers = require("lazy.lang-servers")
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
 			--  other tools, you can run
@@ -70,10 +30,9 @@ return {
 				"pyright", -- Used to format python code
 				"clangd", -- Used to format c pepe
 				"gopls", -- Used for golang
-				"helm-ls", -- Used for golang
+				"helm-ls", -- Used for helm
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-
 			require("mason-lspconfig").setup({
 				handlers = {
 					function(server_name)
