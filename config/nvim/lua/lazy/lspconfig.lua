@@ -11,53 +11,8 @@ return {
 		config = function()
 			require("custom.plugins.lsp-attach")
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = vim.tbl_deep_extend("force", capabilities,
-				require("cmp_nvim_lsp").default_capabilities())
-			local servers = {
-				clangd = {},
-				gopls = {},
-				pyright = {},
-				rust_analyzer = {},
-				yamlls = {
-					--TODO: disable for helm charts
-					-- See if we can see if the helm lsp is already running
-					settings = {
-						yaml = {
-							schemaStore = {
-								enable = false,
-								url = "",
-							},
-							-- Set up Pipeline tooling
-							diagnostics = { disable = { 'missing-fields' } },
-							schemas = {
-								["https://raw.githubusercontent.com/docker/compose/master/compose/config/compose_spec.json"] =
-								"docker-compose*.{yml,yaml}",
-								["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
-									"BuildTools/*.{yml,yaml}",
-									"YamlDefinitions/*.{yml,yaml}",
-									"YamlTemplates/*.{yml,yaml}",
-								},
-							},
-						},
-					},
-				},
-				lua_ls = {
-					-- cmd = {...},
-					-- filetypes { ...},
-					-- capabilities = {},
-					settings = {
-						Lua = {
-							indent_style = "space",
-							indent_size = "2",
-							completion = {
-								callSnippet = "Replace",
-							},
-							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-							-- diagnostics = { disable = { 'missing-fields' } },
-						},
-					},
-				},
-			}
+			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+			local servers = require("lazy.lang-servers")
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
 			--  other tools, you can run
@@ -70,7 +25,7 @@ return {
 			-- for you, so that they are available from within Neovim.
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
-				-- "stylua", -- Used to format lua code
+				"stylua", -- Used to format lua code
 				"rust_analyzer", -- Used to format Rust code
 				"pyright", -- Used to format python code
 				"clangd", -- Used to format c pepe
@@ -85,8 +40,7 @@ return {
 						-- This handles overriding only values explicitly passed
 						-- by the server configuration above. Useful when disabling
 						-- certain features of an LSP (for example, turning off formatting for tsserver)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities,
-							server.capabilities or {})
+						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 						require("lspconfig")[server_name].setup(server)
 					end,
 				},
