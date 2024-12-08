@@ -1,20 +1,5 @@
 return {
 	require("lazy").setup({
 		import = "plugins",
-		-- require("plugins.autocomplete"),
-		-- require("plugins.conform"),
-		-- require("plugins.comment"),
-		-- require("plugins.oil"),
-		-- require("plugins.indent_line"),
-		-- require("plugins.gitsigns"),
-		-- require("plugins.lspconfig"),
-		-- require("plugins.mini"),
-		-- require("plugins.startup"),
-		-- require("plugins.telescope"),
-		-- require("plugins.theme"),
-		-- require("plugins.todo"),
-		-- require("plugins.tree-sitter"),
-		-- require("plugins.vim-helm"),
-		-- require("plugins.vim-sleuth"),
-	}, {}),
+	}),
 }
