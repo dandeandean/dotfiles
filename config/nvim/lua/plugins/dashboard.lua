@@ -25,7 +25,7 @@ return {
 						{
 							icon = "󰏇	 ",
 							desc = "Oil",
-							key = "o",
+							key = ";",
 							action = "Oil",
 						},
 						{
