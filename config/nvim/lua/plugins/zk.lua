@@ -19,6 +19,7 @@ return {
 					enabled = true,
 					filetypes = { "markdown" },
 				},
+				-- Make sure to set $ZK_NOTEBOOK_DIR
 				vim.keymap.set("n", "<leader>zk", "<CMD>ZkNotes<CR>", { desc = "ZK" }),
 			},
 		})
