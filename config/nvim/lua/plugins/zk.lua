@@ -4,8 +4,7 @@ return {
 		require("zk").setup({
 			-- can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`)
 			-- it's recommended to use "telescope", "fzf", "fzf_lua", or "minipick"
-			picker = "select",
-
+			picker = "telescope",
 			lsp = {
 				-- `config` is passed to `vim.lsp.start_client(config)`
 				config = {
@@ -20,6 +19,7 @@ return {
 					enabled = true,
 					filetypes = { "markdown" },
 				},
+				vim.keymap.set("n", "<leader>zk", "<CMD>ZkNotes<CR>", { desc = "ZK" }),
 			},
 		})
 	end,
