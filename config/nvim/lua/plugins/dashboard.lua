@@ -22,6 +22,7 @@ return {
 						"                                                       ",
 					},
 					center = {
+						-- search symbols
 						{
 							icon = "󰏇	 ",
 							desc = "Oil",
@@ -35,10 +36,16 @@ return {
 							action = "Telescope live_grep",
 						},
 						{
-							icon = "	 ",
-							desc = "Search Recent",
-							key = "sr",
-							action = "Telescope oldfiles",
+							icon = "	 ",
+							desc = "Search files",
+							key = "sf",
+							action = "Telescope find_files",
+						},
+						{
+							icon = "󰭤	 ",
+							desc = "Zettlekasten",
+							key = "zk",
+							action = "ZkNotes",
 						},
 						{
 							icon = "󰩈	 ",
