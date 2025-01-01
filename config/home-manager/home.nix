@@ -61,10 +61,8 @@
       if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	exec tmux
       fi
+      export ZK_NOTEBOOK_DIR="$HOME/notes"
     '';
-    sessionVariables = {
-      ZK_NOTEBOOK_DIR = "$HOME/notes";
-    };
   };
 
   programs.git = {
