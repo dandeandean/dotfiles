@@ -13,10 +13,6 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 			local servers = {
-				clangd = {},
-				gopls = {},
-				pyright = {},
-				rust_analyzer = {},
 				yamlls = {
 					settings = {
 						yaml = {
@@ -62,9 +58,6 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format lua code
-				"rust_analyzer", -- Used to format Rust code
-				"pyright", -- Used to format python code
-				"clangd", -- Used to format c pepe
 				"gopls", -- Used for golang
 				"helm-ls", -- Used for helm
 			})
