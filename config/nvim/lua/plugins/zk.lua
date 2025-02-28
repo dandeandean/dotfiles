@@ -11,8 +11,6 @@ return {
 					cmd = { "zk", "lsp" },
 					name = "zk",
 					--
-					-- cmd = { "/Users/dandean/git/zk/zk", "lsp" },
-					-- name = "zk-dev",
 					-- on_attach = ...
 					-- etc, see `:h vim.lsp.start_client()`
 				},

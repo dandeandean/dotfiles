@@ -1,4 +1,0 @@
-ripgrep
-lua
-clang
-go
