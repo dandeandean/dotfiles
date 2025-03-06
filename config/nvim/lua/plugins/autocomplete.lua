@@ -15,9 +15,11 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
+			"rafamadriz/friendly-snippets",
 		},
 		config = function()
 			-- See `:help cmp`
+			require("luasnip.loaders.from_vscode").lazy_load()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			luasnip.config.setup({})
