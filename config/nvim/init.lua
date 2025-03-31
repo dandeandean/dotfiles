@@ -27,6 +27,13 @@ vim.cmd.colorscheme("retrobox")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = false,
+})
 -- lua/
 require("options")
 require("keymappings")
