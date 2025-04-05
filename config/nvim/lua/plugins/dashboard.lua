@@ -26,8 +26,6 @@ return {
 						[[               /:::========|  |==hjkl==:::\  \ required \            ]],
 						[[              '""""""""""""'  '""""""""""""'  '""""""""""'           ]],
 						[[                                                                     ]],
-						[[                                                                     ]],
-						[[                                                                     ]],
 						[[]],
 					},
 
@@ -50,6 +48,18 @@ return {
 							desc = "Search files",
 							key = "sf",
 							action = "Telescope find_files",
+						},
+						{
+							icon = "	 ",
+							desc = "Search files",
+							key = "sr",
+							action = "Telescope oldfiles",
+						},
+						{
+							icon = "	 ",
+							desc = "Search Keymaps",
+							key = "sr",
+							action = "Telescope keymaps",
 						},
 						{
 							icon = "󰭤	 ",
