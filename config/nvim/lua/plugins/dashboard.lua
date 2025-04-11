@@ -51,14 +51,14 @@ return {
 						},
 						{
 							icon = "	 ",
-							desc = "Search files",
+							desc = "Search Recent",
 							key = "sr",
 							action = "Telescope oldfiles",
 						},
 						{
 							icon = "	 ",
 							desc = "Search Keymaps",
-							key = "sr",
+							key = "sk",
 							action = "Telescope keymaps",
 						},
 						{
