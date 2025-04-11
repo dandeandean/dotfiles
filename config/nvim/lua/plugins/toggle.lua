@@ -7,11 +7,11 @@ return {
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
-		opts = {
-			float_opts = {
-				border = "curved",
-				title_pos = "center",
-			},
-		},
+		config = function()
+			require("toggleterm").setup({
+				direction = "float",
+			})
+		end,
 	},
+	vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "Toggle Term" }),
 }
