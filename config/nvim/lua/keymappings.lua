@@ -1,13 +1,13 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 -- Splitting
 vim.keymap.set("n", "<leader>\\", function()
 	vim.cmd("vsplit")
 	local win = vim.api.nvim_get_current_win()
 	local buf = vim.api.nvim_create_buf(true, true)
 	vim.api.nvim_win_set_buf(win, buf)
+	require("oil").open()
 end, { desc = "Vertical split" })
 
 vim.keymap.set("n", "<leader>-", function()
@@ -15,6 +15,7 @@ vim.keymap.set("n", "<leader>-", function()
 	local win = vim.api.nvim_get_current_win()
 	local buf = vim.api.nvim_create_buf(true, true)
 	vim.api.nvim_win_set_buf(win, buf)
+	require("oil").open()
 end, { desc = "Horizontal split" })
 
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
