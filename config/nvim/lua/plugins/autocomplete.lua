@@ -21,7 +21,9 @@ return {
 		config = function()
 			-- See `:help cmp`
 			require("luasnip.loaders.from_vscode").lazy_load()
-			--require("luasnip.loaders.from_snipmate").lazy_load()
+			require("luasnip.loaders.from_vscode").load_standalone({
+				path = "~/.config/nvim/lua/plugins/snippets/pipelines.code-snippets",
+			})
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			luasnip.config.setup({})

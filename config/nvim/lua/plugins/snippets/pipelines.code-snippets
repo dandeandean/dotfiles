@@ -1,0 +1,12 @@
+{
+    "bash": {
+        "prefix": "bash",
+        "body": [
+								"bash: |",
+								"  $1"
+        ],
+        "description": "Another snippet-description.",
+        "scope": "yaml"
+    }
+}
+
