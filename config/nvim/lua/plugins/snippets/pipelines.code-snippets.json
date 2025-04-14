@@ -1,0 +1,37 @@
+{
+    "bash": {
+        "prefix": "- bash:",
+        "body": [
+            "- bash: |",
+            "    $1"
+        ],
+        "description": "Bash job",
+        "scope": "yaml"
+    },
+    "scaffold": {
+        "prefix": "stages",
+        "body": [
+            "stages:",
+            "- stage: $1",
+            "    jobs:",
+            "    - jobs: $2",
+            "      steps:",
+            "      - step: $3"
+        ],
+        "description": "Stages, jobs, & steps",
+        "scope": "yaml"
+    },
+    "python-inline": {
+        "prefix": "- task: PythonScript@0",
+        "body": [
+        "- task: PythonScript@0",
+        "  inputs:",
+        "    scriptSource: 'inline'",
+        "    script: |",
+        "      $1"
+        ],
+        "description": "Python inline script",
+        "scope": "yaml"
+    }
+}
+
