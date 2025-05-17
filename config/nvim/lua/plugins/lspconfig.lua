@@ -7,7 +7,11 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			"echasnovski/mini.completion",
 			{ "j-hui/fidget.nvim", opts = {} },
-			{ "folke/neodev.nvim", opts = {} },
+			--{ "folke/neodev.nvim", opts = {} },
+			{
+				"folke/lazydev.nvim",
+				ft = "lua", -- only load on lua files
+			},
 		},
 		config = function()
 			require("custom.plugins.lsp-attach")
