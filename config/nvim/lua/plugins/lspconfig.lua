@@ -6,8 +6,8 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			"echasnovski/mini.completion",
-			{ "j-hui/fidget.nvim", opts = {} },
-			{ "folke/lazydev.nvim", ft = "lua" },
+			"j-hui/fidget.nvim",
+			"folke/lazydev.nvim",
 		},
 		config = function()
 			require("mini.completion").setup()
