@@ -10,7 +10,6 @@ return {
 			"folke/lazydev.nvim",
 		},
 		config = function()
-			require("mini.completion").setup()
 			require("mason").setup()
 			require("mason-lspconfig").setup({
 				automatic_enable = true,
