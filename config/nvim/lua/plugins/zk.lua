@@ -6,7 +6,7 @@ return {
 			lsp = {
 				-- `config` is passed to `vim.lsp.start_client(config)`
 				config = {
-					cmd = { "zk", "lsp" },
+					cmd = { "/Users/dandean/git/zk/zk", "lsp" },
 					name = "zk",
 				},
 				auto_attach = {
