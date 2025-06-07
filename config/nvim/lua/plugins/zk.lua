@@ -5,6 +5,9 @@ return {
 			picker = "telescope",
 			lsp = {
 				-- `config` is passed to `vim.lsp.start_client(config)`
+				-- if auto complete isn't working, try the following in $ZK_NOTEBOOK_DIR/.zk
+				-- [lsp.completion]
+				-- use-additional-text-edits = true
 				config = {
 					cmd = { "zk", "lsp" },
 					name = "zk",
