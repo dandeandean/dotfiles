@@ -1,7 +1,7 @@
 ## Just Source this in your .zshrc
-source ./env.zsh
-source ./alias.zsh
-source ./func.zsh
+source "${funcsourcetrace[1]%/*}/env.zsh"
+source "${funcsourcetrace[1]%/*}/alias.zsh"
+source "${funcsourcetrace[1]%/*}/func.zsh"
 
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
