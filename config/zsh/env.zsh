@@ -1,11 +1,10 @@
 export EDITOR="nvim"
 export ZSH_THEME=bira
-export CONFIG_PATH=bira
+export CONFIG_PATH="$HOME/.config/"
 
 if command -v go &> /dev/null; then
 	export PATH="$PATH:$(go env GOPATH)/bin"
 fi
-
 if command -v zk &> /dev/null; then
 	export ZK_NOTEBOOK_DIR="$HOME/Notes/"
 fi
