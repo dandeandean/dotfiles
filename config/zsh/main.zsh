@@ -1,3 +1,4 @@
+## Just Source this in your .zshrc
 source ./env.zsh
 source ./alias.zsh
 source ./func.zsh
