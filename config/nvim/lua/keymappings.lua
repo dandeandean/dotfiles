@@ -4,17 +4,17 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 -- Splitting
 vim.keymap.set("n", "<leader>\\", function()
 	vim.cmd("vsplit")
-	local win = vim.api.nvim_get_current_win()
-	local buf = vim.api.nvim_create_buf(true, true)
-	vim.api.nvim_win_set_buf(win, buf)
+	-- local win = vim.api.nvim_get_current_win()
+	-- local buf = vim.api.nvim_create_buf(true, true)
+	-- vim.api.nvim_win_set_buf(win, buf)
 	require("oil").open()
 end, { desc = "Vertical split" })
 
 vim.keymap.set("n", "<leader>-", function()
 	vim.cmd("split")
-	local win = vim.api.nvim_get_current_win()
-	local buf = vim.api.nvim_create_buf(true, true)
-	vim.api.nvim_win_set_buf(win, buf)
+	-- local win = vim.api.nvim_get_current_win()
+	-- local buf = vim.api.nvim_create_buf(true, true)
+	-- vim.api.nvim_win_set_buf(win, buf)
 	require("oil").open()
 end, { desc = "Horizontal split" })
 
