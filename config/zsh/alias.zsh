@@ -7,3 +7,4 @@ alias gs="git status"
 alias k="kubectl"
 alias bw="bookworm"
 alias reload="source $HOME/.zshrc"
+alias tf=tofu
