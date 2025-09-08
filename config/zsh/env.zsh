@@ -1,5 +1,5 @@
 export EDITOR="nvim"
-export ZSH_THEME=bira
+export ZSH_THEME=${ZSH_THEME:-bira}
 export CONFIG_PATH="$HOME/.config/"
 
 if command -v go &> /dev/null; then
