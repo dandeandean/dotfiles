@@ -7,6 +7,9 @@ vim.lsp.config('yamlls', {
 					"missing-fields",
 				},
 			},
+			format = {
+				enable = false
+			},
 			schemas = {
 				["https://raw.githubusercontent.com/docker/compose/master/compose/config/compose_spec.json"] =
 				"docker-compose*.{yml,yaml}",
