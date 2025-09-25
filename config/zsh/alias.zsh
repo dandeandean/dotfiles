@@ -1,10 +1,10 @@
-alias vim="nvim"
-alias v="nvim"
-alias py="python3"
+alias vim=nvim
+alias v=nvim
+alias py=python3
 alias config="vim $CONFIG_PATH"
-alias ff="fastfetch"
-alias gs="git status"
-alias k="kubectl"
-alias bw="bookworm"
+alias ff=fastfetch
+alias k=kubectl
+alias bw=bookworm
 alias reload="source $HOME/.zshrc"
 alias tf=tofu
+alias lg=lazygit
