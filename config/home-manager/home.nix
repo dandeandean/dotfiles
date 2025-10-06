@@ -1,10 +1,11 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}:{
+
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+  home.stateVersion = "25.05"; # Static here too
   home.username = "ddd";
   home.homeDirectory = "/home/ddd";
-  home.stateVersion = "25.05"; # Please read the comment before changing.
   home.packages = with pkgs; [
-    home-manager
     ################### User ###################
     fastfetch
     htop
@@ -16,13 +17,16 @@
     nvimpager
     nmap
     cowsay
-    gh
     opentofu
     k3d
     k9s
     jq
     tree
     fzf
+
+    ###################### DEV ######################
+    uv
+    sqlite
 
     ################### NVIM DEPS ###################
     ripgrep
@@ -36,21 +40,30 @@
     gcc_multi
     unzip
 
-    ################### FONTS ###################
+    #################### DEKSTOP ####################
     nerd-fonts.fira-code
+    wofi
+    waybar
+    hyprpaper
+    ghostty
+    firefox
   ];
-
-  programs.git = {
-    enable = true;
-    userName  = "dandeandean";
-    userEmail = "dandean44523@gmail.com";
-  };
   fonts.fontconfig.enable = true;
 
-  # nix = {
-  #   package = pkgs.nix;
-  #   settings.experimental-features = [ "nix-command" "flakes" ];
-  # };
+  ###################### GIT ######################
+  programs = {
+    git = {
+      enable = true;
+      userName  = "dandeandean";
+      userEmail = "dandean44523@gmail.com";
+    };
+    gh = {
+      enable = true;
+      gitCredentialHelper.enable = true;
+    };
+  };
+
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -77,7 +90,4 @@
       source $HOME/git/dotfiles/config/zsh/main.zsh
     '';
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }
