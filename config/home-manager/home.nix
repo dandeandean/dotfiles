@@ -29,6 +29,7 @@
       uv
       sqlite
       lazygit
+      gnumake
 
       ################### NVIM DEPS ###################
       ripgrep
