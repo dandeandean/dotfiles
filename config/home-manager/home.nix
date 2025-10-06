@@ -12,8 +12,6 @@
       ################### User ###################
       fastfetch
       htop
-      zsh
-      tmux
       curl
       nettools
       powershell
@@ -30,6 +28,7 @@
       ###################### DEV ######################
       uv
       sqlite
+      lazygit
 
       ################### NVIM DEPS ###################
       ripgrep
@@ -85,11 +84,6 @@
       plugins = [ "git" ];
     };
     initContent = ''
-      if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-	exec tmux
-      fi
-      export ZK_NOTEBOOK_DIR="$HOME/notes"
-      export EDITOR="nvim"
       source $HOME/git/dotfiles/config/zsh/main.zsh
     '';
   };
@@ -101,7 +95,7 @@
       yank
     ];
     extraConfig = ''
-      # add: source-file & path to this file in ~/.tmux.conf
+      set-window-option -g mode-keys vi
       bind r source-file ~/.tmux.conf
 
       bind h select-pane -L
@@ -138,7 +132,7 @@
       ## Current Stuff
       setw -g window-status-current-style 'bg=yellow'
       setw -g window-status-current-format ' #W #I '
-      setw -g window-status-separator \'\'
+      setw -g window-status-separator '|'
 
       set -g status-right-style 'fg=black bg=yellow'
       set -g status-right ' %Y-%m-%d %H:%M '
@@ -147,4 +141,9 @@
       set -g message-style 'fg=maroon bg=terminal bold'
     '';
   };	
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }
