@@ -12,3 +12,6 @@ fi
 if command -v cards &> /dev/null; then
 	export CARDSHOME="$HOME/.config/cards"
 fi
+
+autoload -Uz compinit
+compinit
