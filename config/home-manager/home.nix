@@ -97,6 +97,7 @@
     ];
     extraConfig = ''
       set-window-option -g mode-keys vi
+      set -g base-index 1 # start windows numbering at 1
       bind r source-file ~/.tmux.conf
 
       bind h select-pane -L
