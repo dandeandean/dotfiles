@@ -3,13 +3,6 @@ source "${funcsourcetrace[1]%/*}/env.zsh"
 source "${funcsourcetrace[1]%/*}/alias.zsh"
 source "${funcsourcetrace[1]%/*}/func.zsh"
 
-autoload -Uz compinit
-compinit
-
-if command -v bookworm &>/dev/null; then
-  source <(bookworm completion zsh)
-fi
-
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
 fi

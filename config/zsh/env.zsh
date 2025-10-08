@@ -15,3 +15,8 @@ fi
 
 autoload -Uz compinit
 compinit
+
+if command -v bookworm &>/dev/null; then
+  source <(bookworm completion zsh)
+fi
+
