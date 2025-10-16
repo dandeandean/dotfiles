@@ -35,5 +35,9 @@
     unzip
     # Breaking in the Darwin build
     # gcc_multi
+
+    nnn
+    bat
+    auth0-cli
   ];
 }
