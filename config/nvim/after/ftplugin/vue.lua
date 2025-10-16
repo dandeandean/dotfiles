@@ -1,1 +1,1 @@
-vim.lsp.enable('vue_ls')
+vim.lsp.enable("vue_ls")

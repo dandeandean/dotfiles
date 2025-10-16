@@ -1,5 +1,5 @@
 local set = vim.opt_local
-vim.lsp.config('yamlls', {
+vim.lsp.config("yamlls", {
 	settings = {
 		yaml = {
 			diagnostics = {
@@ -8,11 +8,10 @@ vim.lsp.config('yamlls', {
 				},
 			},
 			format = {
-				enable = false
+				enable = false,
 			},
 			schemas = {
-				["https://raw.githubusercontent.com/docker/compose/master/compose/config/compose_spec.json"] =
-				"docker-compose*.{yml,yaml}",
+				["https://raw.githubusercontent.com/docker/compose/master/compose/config/compose_spec.json"] = "docker-compose*.{yml,yaml}",
 			},
 		},
 	},

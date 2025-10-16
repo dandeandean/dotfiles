@@ -8,7 +8,6 @@
     nettools
     powershell
     nvimpager
-    nmap
     cowsay
     opentofu
     k3d
