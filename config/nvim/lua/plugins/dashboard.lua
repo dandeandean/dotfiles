@@ -50,6 +50,12 @@ return {
 							action = "Telescope find_files",
 						},
 						{
+							icon = "	 ",
+							desc = "Edit Nvim Config",
+							key = "ee",
+							action = "e ~/.config/nvim",
+						},
+						{
 							icon = "	 ",
 							desc = "Search Recent",
 							key = "sr",
