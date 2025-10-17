@@ -10,7 +10,9 @@ return {
 			"folke/lazydev.nvim",
 		},
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+					PATH = "append",
+				})
 			require("mason-lspconfig").setup({
 				automatic_enable = true,
 				ensure_installed = {

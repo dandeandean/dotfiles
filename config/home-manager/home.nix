@@ -43,6 +43,11 @@
       gcc_multi
       unzip
 
+
+      ## LSPs ### (that Mason can't sort out)
+      rust-analyzer
+      lua-language-server
+
       #################### DEKSTOP ####################
       nerd-fonts.fira-code
       wofi
