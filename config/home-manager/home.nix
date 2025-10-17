@@ -50,6 +50,11 @@
       hyprpaper
       ghostty
       firefox
+
+      #################################################
+      auth0-cli
+      opentofu
+
     ];
   };
   fonts.fontconfig.enable = true;
