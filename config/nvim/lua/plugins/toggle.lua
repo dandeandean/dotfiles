@@ -5,6 +5,7 @@ return {
 		config = function()
 			require("toggleterm").setup({
 				direction = "float",
+				start_in_insert = true,
 			})
 		end,
 	},
