@@ -38,5 +38,12 @@
     nnn
     bat
     auth0-cli
+
+    # embedded
+    arduino-cli
+    platformio
+    clang-tools
+    avrgcc
+    avrlibc
   ];
 }
