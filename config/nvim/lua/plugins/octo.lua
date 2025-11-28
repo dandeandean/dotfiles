@@ -1,4 +1,6 @@
 return {
 	"pwntester/octo.nvim",
-	opts = {},
+	opts = {
+		enable_builtin = true,
+	},
 }
