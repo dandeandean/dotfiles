@@ -43,7 +43,5 @@
     arduino-cli
     platformio
     clang-tools
-    avrgcc
-    avrlibc
   ];
 }
