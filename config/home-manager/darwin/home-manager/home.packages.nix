@@ -43,5 +43,8 @@
     arduino-cli
     platformio
     clang-tools
+
+    zola
+
   ];
 }
