@@ -44,7 +44,5 @@
     platformio
     clang-tools
 
-    zola
-
   ];
 }
