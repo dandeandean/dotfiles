@@ -32,6 +32,7 @@
     };
     initExtra = ''
       source $HOME/git/dotfiles/config/zsh/main.zsh
+      XDG_CONFIG_HOME=$HOME/.config
     '';
   };
 
