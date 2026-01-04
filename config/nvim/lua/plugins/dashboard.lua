@@ -63,9 +63,9 @@ return {
 						},
 						{
 							icon = "󰭤	 ",
-							desc = "Zettlekasten",
-							key = "zk",
-							action = "ZkNotes",
+							desc = "Edit Config",
+							key = "cc",
+							action = "e ~/.config/nvim",
 						},
 						{
 							icon = "󰩈	 ",
