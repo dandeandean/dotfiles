@@ -1,8 +1,14 @@
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.cmd.colorscheme("retrobox")
+if os.getenv("XDG_SESSION_TYPE") == "tty" then
+	vim.cmd.colorscheme("ron")
+	vim.g.have_nerd_font = false
+else
+	vim.cmd.colorscheme("retrobox")
+	vim.g.have_nerd_font = true
+end
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.g.have_nerd_font = true
 vim.diagnostic.config({
 	virtual_text = true,
 	signs = true,
