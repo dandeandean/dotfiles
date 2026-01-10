@@ -1,4 +1,4 @@
-{pkgs, ...}:{
+{ pkgs, ... }: {
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -40,9 +40,7 @@
       cargo
       go
       nodejs_22
-      gcc_multi
       unzip
-
 
       ## LSPs ### (that Mason can't sort out)
       rust-analyzer
@@ -68,7 +66,7 @@
   programs = {
     git = {
       enable = true;
-      userName  = "dandeandean";
+      userName = "dandeandean";
       userEmail = "dandean44523@gmail.com";
     };
     gh = {
@@ -102,9 +100,7 @@
   programs.tmux = {
     enable = true;
     clock24 = true;
-    plugins = with pkgs.tmuxPlugins; [
-      yank
-    ];
+    plugins = with pkgs.tmuxPlugins; [ yank ];
     extraConfig = ''
       set-window-option -g mode-keys vi
       set -g base-index 1 # start windows numbering at 1
@@ -152,7 +148,7 @@
 
       set -g message-style 'fg=maroon bg=terminal bold'
     '';
-  };	
+  };
 
   programs.zoxide = {
     enable = true;
