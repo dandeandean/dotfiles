@@ -19,7 +19,6 @@
       nmap
       cowsay
       opentofu
-      k3d
       k9s
       jq
       tree
@@ -47,17 +46,13 @@
       lua-language-server
 
       #################### DEKSTOP ####################
-      nerd-fonts.fira-code
+      nerd-fonts.agave
       wofi
       waybar
-      hyprpaper
       ghostty
       firefox
-
-      #################################################
-      auth0-cli
-      opentofu
-
+      sway
+      autotiling-rs
     ];
   };
   fonts.fontconfig.enable = true;
