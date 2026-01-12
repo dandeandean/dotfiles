@@ -53,6 +53,9 @@
       firefox
       sway
       autotiling-rs
+
+      #################### CONTAINERS ####################
+      nerdctl
     ];
   };
   fonts.fontconfig.enable = true;
@@ -78,9 +81,9 @@
     shellAliases = {
       v = "nvim";
       reload = "source $HOME/.zshrc";
-      config = "nvim $HOME/.config/";
-      manage = "nvim $HOME/.config/home-manager/";
-      nixedit = "sudoedit /etc/nixos/configuration.nix";
+      config = "$EDITOR $HOME/.config/";
+      manage = "$EDITOR $HOME/.config/home-manager/";
+      nixedit = "$EDITOR $HOME/git/nixos-config";
       nixupdate = "sudo nixos-rebuild switch";
     };
     oh-my-zsh = {
