@@ -2,7 +2,7 @@
 source "${funcsourcetrace[1]%/*}/env.zsh"
 source "${funcsourcetrace[1]%/*}/alias.zsh"
 source "${funcsourcetrace[1]%/*}/func.zsh"
-source "${funcsourcetrace[1]%/*}/secrets.zsh"
+source "${HOME}/.secrets.zsh"
 
 if command -v zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
