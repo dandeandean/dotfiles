@@ -27,3 +27,4 @@ require("custom.plugins")
 require("custom.plugins.lsp-attach")
 -- Need to install fzf first
 require("custom.plugins.bookworm")
+require("custom.plugins.gitgo")

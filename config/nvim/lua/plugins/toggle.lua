@@ -4,7 +4,7 @@ return {
 		version = "*",
 		config = function()
 			require("toggleterm").setup({
-				direction = "tab",
+				direction = "float",
 				start_in_insert = true,
 			})
 		end,
