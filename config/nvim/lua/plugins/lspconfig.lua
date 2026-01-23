@@ -11,8 +11,8 @@ return {
 		},
 		config = function()
 			require("mason").setup({
-					PATH = "append",
-				})
+				PATH = "append",
+			})
 			require("mason-lspconfig").setup({
 				automatic_enable = true,
 				ensure_installed = {
