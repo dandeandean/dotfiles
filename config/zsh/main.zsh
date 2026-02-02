@@ -10,7 +10,7 @@ fi
 
 # TMUX on startup
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  if [[ ! "$TERM"  =~ "linux" ]]; then
+  if [[ ! "$XDG_SESSION_TYPE" =~ "tty" ]]; then
     exec tmux
   fi
 fi
