@@ -1,5 +1,5 @@
 export EDITOR="nvim"
-export ZSH_THEME=${ZSH_THEME:-bira}
+export ZSH_THEME=aussiegeek
 export CONFIG_PATH="$HOME/.config/"
 export XDG_CONFIG_HOME="$HOME/.config/"
 
