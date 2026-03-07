@@ -8,3 +8,5 @@ alias bw=bookworm
 alias reload="source $HOME/.zshrc"
 alias tf=tofu
 alias lg=lazygit
+alias edit="$EDITOR"
+alias e="$EDITOR"
