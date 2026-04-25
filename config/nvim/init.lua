@@ -7,6 +7,8 @@ else
 	vim.g.have_nerd_font = true
 end
 
+vim.o.autoread = true
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.diagnostic.config({
