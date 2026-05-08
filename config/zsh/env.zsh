@@ -25,3 +25,9 @@ if command -v bookworm &>/dev/null; then
   source <(bookworm completion zsh)
 fi
 
+function _yoke() {
+  export COMP_LINE
+  COMPREPLY=($(yoke complete $COMP_LINE));
+};
+
+complete -F _yoke yoke
